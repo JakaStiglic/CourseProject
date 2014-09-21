@@ -8,6 +8,7 @@ CODEBOOK
 RAW DATA
 
 ==============================================================================================================
+
 The original data are collected from the from the Samsung Galaxy S smartphone and are 
 available on the following website:
 
@@ -23,6 +24,7 @@ preprocessed.
 EXTRACTED DATA
 
 ==============================================================================================================
+
 The two datasets were merged from where the mean and std (standard variation) variables were 
 extracted for the following signals: 
 
@@ -63,6 +65,8 @@ tBodyGyroscopeMean
 tBodyGyroscopeJerkMean
 
 Note that all of the features are normalized and bounded within [-1,1].
+
+
 ==============================================================================================================
 
 TIDY DATASET

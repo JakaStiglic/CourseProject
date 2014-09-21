@@ -10,23 +10,23 @@
 
 #1.)
 # Reading in set, labels and subjects for Test data set
-x_test <-read.table("./data/UCI HAR Dataset/test/X_test.txt", header = FALSE, sep = "")
-test_labels <- read.table("./data/UCI HAR Dataset/test/y_test.txt", header = FALSE, sep = "")
-subject_test <- read.table("./data/UCI HAR Dataset/test/subject_test.txt", header = FALSE, sep = "")
+x_test <-read.table("./UCI HAR Dataset/test/X_test.txt", header = FALSE, sep = "")
+test_labels <- read.table("./UCI HAR Dataset/test/y_test.txt", header = FALSE, sep = "")
+subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt", header = FALSE, sep = "")
 test_data <- cbind(subject_test,test_labels, x_test)
 
 
 # Reading in set, labels and subjects for Train data set
-x_train <-read.table("./data/UCI HAR Dataset/train/X_train.txt", header = FALSE, sep = "")
-train_labels <- read.table("./data/UCI HAR Dataset/train/y_train.txt", header = FALSE, sep = "")
-subject_train <- read.table("./data/UCI HAR Dataset/train/subject_train.txt", header = FALSE, sep = "")
+x_train <-read.table("./UCI HAR Dataset/train/X_train.txt", header = FALSE, sep = "")
+train_labels <- read.table("./UCI HAR Dataset/train/y_train.txt", header = FALSE, sep = "")
+subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt", header = FALSE, sep = "")
 train_data <- cbind(subject_train, train_labels, x_train)
 
 #Merging Test and Train data into MergedData
 MergedData <- rbind(train_data,test_data)
 
 # Reading in features and naming varaibles
-feature_list <- read.table("./data/UCI HAR Dataset/features.txt",header = FALSE, sep = "")
+feature_list <- read.table("./UCI HAR Dataset/features.txt",header = FALSE, sep = "")
 names(MergedData) <- c("Subject", "Activity", as.character(feature_list$V2))
 
 
@@ -46,7 +46,7 @@ MergedData <- MergedData[,c(1,2,nCol)]
 #3.)
 #
 # Reading in Activities and their related numbers
-activity_labels <- read.table("./data/UCI HAR Dataset/activity_labels.txt",header = FALSE, sep = "",
+activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt",header = FALSE, sep = "",
                               col.names = c("Number","Activity"))
 #Renaming activities based on read in activity labels
 for (i in 1:6) {

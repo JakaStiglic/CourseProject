@@ -40,7 +40,7 @@ www.smartlab.ws
 Data can be downloaded from the following link:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-Data was then unziped and placed into ~R\data\UCI HAR Dataset directory. Folder structure
+Data was then unziped and placed into ~R\UCI HAR Dataset directory. Folder structure
 is crucial as the "run_analysis.R" script is reading the data from there. 
 
 ==========================================================================================
